@@ -23,7 +23,9 @@ class UpdateService:
         self.local_version = self.local_root / "version.txt"
         self.local_exe = self.local_root / CORE_EXE_NAME
 
-        self.log_file = self.local_root / "logs" / "launcher.log"
+        # self.log_file = self.local_root / "logs" / "launcher.log"
+        self.server_logs = self.server_root / "logs"
+        self.log_file = self.server_logs / "launcher.log"
 
     def get_server_root(self):
         if getattr(sys, "frozen", False):
